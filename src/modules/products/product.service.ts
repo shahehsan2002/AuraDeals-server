@@ -13,7 +13,14 @@ const getAllProducts = async () => {
   return result;
 };
 
+// Get product by id
+const getProductById = async (id: string) => {
+  const result = await product.findById(id);
+  return result;
+};
+
 export const ProductServices = {
   createProduct,
   getAllProducts,
+  getProductById,
 };
