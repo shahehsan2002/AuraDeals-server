@@ -1,0 +1,12 @@
+import { TProduct } from "./product.interface";
+import { product } from "./product.model";
+
+// Create a new product
+const createProduct = async (payload: TProduct) => {
+    const result = await product.create(payload);
+    return result;
+};
+
+export const ProductServices = {
+    createProduct
+}

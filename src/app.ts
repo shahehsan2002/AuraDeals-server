@@ -1,12 +1,13 @@
 import express, { Request, Response } from "express";
-import { MovieRoutes } from "./modules/movies/movie.route";
+import { ProductRoutes } from "./modules/products/product.route";
+// import { MovieRoutes } from "./modules/movies/movie.route";
 const app = express();
 
 // Parser
 app.use(express.json());
 
 // Routes
-app.use("/api/movies", MovieRoutes);
+app.use("/api/products", ProductRoutes);
 app.get("/", (req: Request, res: Response) => {
   res.send("Hello World!");
 });
