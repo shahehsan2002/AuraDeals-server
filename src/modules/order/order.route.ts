@@ -1,8 +1,9 @@
-import { Router } from "express";
-import { createOrderController } from "./order.controller";
+import { Router } from 'express';
+import { createOrderController } from './order.controller';
 
 const router = Router();
 
-// route to create new order
-
+// Route to create an order
 router.post('/create', createOrderController);
+
+export const orderRoutes = router;
